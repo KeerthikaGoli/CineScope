@@ -1,8 +1,17 @@
+import { Link } from "react-router-dom";
+
 function MovieCard({ movie }) {
+  const posterUrl = movie.poster_path
+    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+    : "https://via.placeholder.com/500x750?text=No+Poster";
+
   return (
-    <article className="movie-card">
+    <Link
+      to={`/movie/${movie.id}`}
+      className="movie-card"
+    >
       <img
-        src={movie.poster}
+        src={posterUrl}
         alt={movie.title}
         className="movie-poster"
       />
@@ -11,12 +20,16 @@ function MovieCard({ movie }) {
         <h3>{movie.title}</h3>
 
         <div className="movie-meta">
-          <span>⭐ {movie.rating}</span>
-          <span>{movie.year}</span>
-          <span>{movie.genre}</span>
+          <span>
+            ⭐ {movie.vote_average?.toFixed(1)}
+          </span>
+
+          <span>
+            {movie.release_date?.slice(0, 4)}
+          </span>
         </div>
       </div>
-    </article>
+    </Link>
   );
 }
 

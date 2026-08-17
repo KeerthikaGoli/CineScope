@@ -148,3 +148,161 @@ body {
 .hero button:hover {
   transform: translateY(-2px);
 }
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  max-width: 650px;
+  margin: 35px auto 0;
+}
+
+.search-form input {
+  flex: 1;
+
+  padding: 15px 18px;
+
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  background: #15151a;
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: #666;
+}
+
+.search-form button {
+  padding: 15px 25px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: white;
+  color: black;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  transform: translateY(-2px);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.clear-button {
+  padding: 10px 16px;
+
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #aaa;
+
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  color: white;
+  border-color: #666;
+}
+
+.status-message {
+  padding: 40px 0;
+  color: #888;
+  text-align: center;
+}
+
+.status-message.error {
+  color: #ff6b6b;
+}
+
+.movie-card {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.movie-details {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  min-height: calc(100vh - 70px);
+
+  padding: 80px 40px;
+
+  display: grid;
+  grid-template-columns: 350px 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.details-poster img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+.details-content {
+  max-width: 700px;
+}
+
+.details-label {
+  color: #888;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.details-content h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.details-meta {
+  display: flex;
+  gap: 20px;
+
+  color: #aaa;
+
+  margin-bottom: 25px;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+.genres span {
+  padding: 7px 12px;
+
+  border: 1px solid #333;
+  border-radius: 20px;
+
+  color: #aaa;
+  font-size: 13px;
+}
+
+.overview {
+  color: #aaa;
+  font-size: 17px;
+  line-height: 1.8;
+}
